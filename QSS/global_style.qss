@@ -1,0 +1,21 @@
+﻿QPushButton{
+    font-size: 10pt;
+}
+
+QPushButton:hover{
+}
+
+QPushButton:hover:pressed{
+}
+
+QMenuBar{
+    font-size: 10pt;
+}
+
+QMenu{
+    font-size: 10pt;
+}
+
+QLabel{
+    font-weight: bold;
+}
