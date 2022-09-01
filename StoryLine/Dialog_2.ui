@@ -67,9 +67,9 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="No_Ptn">
+      <widget class="QPushButton" name="Yes_Ptn">
        <property name="text">
-        <string>No</string>
+        <string>Yes</string>
        </property>
       </widget>
      </item>
@@ -87,9 +87,9 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="Yes_Ptn">
+      <widget class="QPushButton" name="No_Ptn">
        <property name="text">
-        <string>Yes</string>
+        <string>No</string>
        </property>
       </widget>
      </item>

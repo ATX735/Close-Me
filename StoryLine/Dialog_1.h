@@ -21,7 +21,7 @@ private slots:
 
 private:
     Ui::Dialog_1 *ui;
-    void closeEvent(QCloseEvent *event);
+    void closeEvent(QCloseEvent *event) override;
 };
 
 #endif  // DIALOG_1_H

@@ -35,7 +35,7 @@
         <property name="font">
          <font>
           <family>Agency FB</family>
-          <pointsize>36</pointsize>
+          <pointsize>48</pointsize>
           <weight>75</weight>
           <bold>true</bold>
          </font>
@@ -123,7 +123,14 @@
     <addaction name="English_Action"/>
     <addaction name="Chinese_Action"/>
    </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionI_Need_Help"/>
+   </widget>
    <addaction name="menuLanguage"/>
+   <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="English_Action">
@@ -143,6 +150,11 @@
    </property>
    <property name="text">
     <string>中文</string>
+   </property>
+  </action>
+  <action name="actionI_Need_Help">
+   <property name="text">
+    <string>I Need Help</string>
    </property>
   </action>
  </widget>

@@ -8,6 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+RC_FILE += set_icon.rc
 TARGET = CloseMe
 TEMPLATE = app
 TRANSLATIONS = Chinese_Translation.ts
@@ -33,7 +34,10 @@ SOURCES += \
     Start_Window.cpp \
     StoryLine/Dialog_2.cpp \
     GlobalData.cpp \
-    StoryLine/Dialog_3.cpp
+    StoryLine/Dialog_3.cpp \
+    StoryLine/Dialog_4.cpp \
+    StoryLine/Dialog_5.cpp \
+    StoryLine/Dialog_6.cpp
 
 HEADERS += \
     Utils.h \
@@ -43,7 +47,10 @@ HEADERS += \
     StoryLine/Dialog_1.h \
     StoryLine/Dialog_2.h \
     GlobalData.h \
-    StoryLine/Dialog_3.h
+    StoryLine/Dialog_3.h \
+    StoryLine/Dialog_4.h \
+    StoryLine/Dialog_5.h \
+    StoryLine/Dialog_6.h
 
 FORMS += \
     WindowTemplates/DialogTemplate.ui \
@@ -51,7 +58,10 @@ FORMS += \
     End_Dlg.ui \
     Start_Window.ui \
     StoryLine/Dialog_2.ui \
-    StoryLine/Dialog_3.ui
+    StoryLine/Dialog_3.ui \
+    StoryLine/Dialog_4.ui \
+    StoryLine/Dialog_5.ui \
+    StoryLine/Dialog_6.ui
 
 
 

@@ -5,4 +5,7 @@
     <qresource prefix="/Translation">
         <file>Chinese_Translation.qm</file>
     </qresource>
+    <qresource prefix="/Icons">
+        <file>Icons/app_icon.ico</file>
+    </qresource>
 </RCC>

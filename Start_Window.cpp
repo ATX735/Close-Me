@@ -30,15 +30,15 @@ void Start_Window::closeEvent(QCloseEvent *event) {
     this->close_counter++;
 
     if (this->close_counter <= 1)
-        Utils::displayMessageBox(tr("Oops~ The game has already started :)"));
+        Utils::DisplayMessageBox(tr("Oops~ The game has already started :)"));
     else if (this->close_counter <= 4)
-        Utils::displayMessageBox(tr("Please stop, it won't work :("));
+        Utils::DisplayMessageBox(tr("Please stop, it won't work :("));
     else if (this->close_counter <= 5)
-        Utils::displayMessageBox(tr("Hey! I said stop!"));
+        Utils::DisplayMessageBox(tr("Hey! I said stop!"));
     else if (this->close_counter <= 10)
-        Utils::displayMessageBox(tr("Whatever~ Do what you like. Idiot!"));
+        Utils::DisplayMessageBox(tr("Whatever~ Do what you like. Idiot!"));
     else if (this->close_counter == this->quit_limit - 1)
-        Utils::displayMessageBox(tr("God damn it!"));
+        Utils::DisplayMessageBox(tr("God damn it!"));
 
     if (this->close_counter >= this->quit_limit) {
         // successfully exit
@@ -49,12 +49,12 @@ void Start_Window::closeEvent(QCloseEvent *event) {
 
 void Start_Window::on_start_Ptn_clicked() {
     GlobalData::GetInstance().miss_count++;
-    QSharedPointer<Dialog_1> dlg = QSharedPointer<Dialog_1>(new Dialog_1(this));
+    QSharedPointer<Dialog_1> dlg = QSharedPointer<Dialog_1>(new Dialog_1(nullptr));
     this->hide();
     dlg->exec();
 }
 
-void Start_Window::on_quit_Ptn_clicked() { Utils::displayMessageBox(tr("Only the coward will click this button!")); }
+void Start_Window::on_quit_Ptn_clicked() { Utils::DisplayMessageBox(tr("Only the coward will click this button!")); }
 
 void Start_Window::on_English_Action_triggered() {
     ui->English_Action->setChecked(true);
@@ -67,5 +67,7 @@ void Start_Window::on_Chinese_Action_triggered() {
     ui->Chinese_Action->setChecked(true);
     GlobalData::GetInstance().current_language = Language::Chinese;
 
-    Utils::displayMessageBox(u8"懒得翻译");
+    Utils::DisplayMessageBox(u8"懒得翻译");
 }
+
+void Start_Window::on_actionI_Need_Help_triggered() { Utils::DisplayMessageBox(tr("I don't want to help you")); }

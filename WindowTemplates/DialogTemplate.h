@@ -14,8 +14,14 @@ public:
     explicit DialogTemplate(QWidget *parent = nullptr);
     ~DialogTemplate();
 
+    // filtering qApp event
+    virtual bool eventFilter(QObject *obj, QEvent *event) override;
+
 private:
     Ui::DialogTemplate *ui;
+
+    // disable close event
+    void closeEvent(QCloseEvent *event) override;
 };
 
 #endif  // DIALOGTEMPLATE_H

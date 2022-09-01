@@ -13,19 +13,17 @@ class Dialog_2 : public DialogTemplate {
     Q_OBJECT
 
 public:
-    explicit Dialog_2(QWidget *parent = nullptr);
+    explicit Dialog_2(QWidget *parent);
     ~Dialog_2();
 
 private slots:
-    void on_No_Ptn_clicked();
+    void on_No_Ptn_clicked();  // contain the process to next dialog
 
-    void on_Yes_Ptn_clicked();  // include a way to close the game
+    void on_Yes_Ptn_clicked();  // contain a way to close the game
 
 private:
     Ui::Dialog_2 *ui;
     int yes_ptn_click_count = 0;  // record how many time player click the "Yes" button
-
-    void closeEvent(QCloseEvent *event);
 };
 
 #endif  // DIALOG_2_H

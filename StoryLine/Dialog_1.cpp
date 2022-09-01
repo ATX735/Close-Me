@@ -11,9 +11,9 @@
 Dialog_1::Dialog_1(QWidget *parent) : DialogTemplate(parent), ui(new Ui::Dialog_1) {
     ui->setupUi(this);
 
-    setWindowTitle(tr("A Dialog"));
+    QString win_title = "You have missed " + QString::number(GlobalData::GetInstance().miss_count) + " chances to close me";
+    setWindowTitle(win_title);
     resize(QSize(GlobalData::GetInstance().dialog_width, GlobalData::GetInstance().dialog_height));
-    //    setWindowFlags(windowFlags() & ~Qt::WindowCloseButtonHint & ~Qt::WindowContextHelpButtonHint);
 
     //    QApplication::beep();
 
@@ -25,12 +25,12 @@ Dialog_1::Dialog_1(QWidget *parent) : DialogTemplate(parent), ui(new Ui::Dialog_
 Dialog_1::~Dialog_1() { delete ui; }
 
 void Dialog_1::closeEvent(QCloseEvent *event) {
-    Utils::displayMessageBox(tr("I said, click the button below! Not this one!"));
+    Utils::DisplayMessageBox(tr("I said, click the button below! Not this one!"));
     event->ignore();
 }
 
 void Dialog_1::on_pushButton_clicked() {
-    QSharedPointer<Dialog_2> dlg = QSharedPointer<Dialog_2>(new Dialog_2(this));
+    QSharedPointer<Dialog_2> dlg = QSharedPointer<Dialog_2>(new Dialog_2(nullptr));
     this->hide();
     dlg->exec();
 }

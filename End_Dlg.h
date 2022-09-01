@@ -22,7 +22,7 @@ private slots:
 
 private:
     Ui::End_Dlg *ui;
-    void closeEvent(QCloseEvent *event);
+    void closeEvent(QCloseEvent *event) override;
 };
 
 #endif  // END_DLG_H

@@ -5,8 +5,14 @@ class Utils {
 public:
     Utils();
 
-    static void beepType_1();
-    static void displayMessageBox(const QString message);
+    // generate a beep sound
+    static void BeepType_1();
+
+    // display a message box, param: message is the message you want to display
+    static void DisplayMessageBox(const QString message);
+
+    // convert QString to char array
+    static char* QstringToCharArray(const QString str);
 };
 
 #endif  // UTILS_H

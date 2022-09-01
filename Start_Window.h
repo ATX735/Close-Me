@@ -23,6 +23,8 @@ private slots:
 
     void on_Chinese_Action_triggered();
 
+    void on_actionI_Need_Help_triggered();
+
 private:
     Ui::Start_Window *ui;
 
@@ -30,7 +32,7 @@ private:
     int quit_limit = 30;
 
     // include a way to close the game
-    void closeEvent(QCloseEvent *event);
+    void closeEvent(QCloseEvent *event) override;
 };
 
 #endif  // START_WINDOW_H
